@@ -1,5 +1,3 @@
-import { PSIKey } from "../properties/Key";
-
 export const run = async (inputSite, lightScore) => {
   const url = setUpQuery(inputSite, lightScore);
   const response = await fetch(url);
@@ -28,6 +26,5 @@ export const setUpQuery = (inputSite, lightScore) => {
     }
   }
 
-  query += `key=${PSIKey}`;
   return query;
 };
